@@ -6,9 +6,13 @@ const cors = require("cors");
 const rateLimit = require("express-rate-limit");
 
 const { MailerSend, EmailParams, Sender, Recipient } = require("mailersend");
+const https = require("https");
+const http = require("http");
+const fs = require("fs");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const HTTPS_PORT = process.env.HTTPS_PORT || 443;
 
 const mailersend = new MailerSend({
   apiKey: process.env.MAILERSEND_API_KEY,
@@ -124,7 +128,44 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: "Something went wrong!" });
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
-  console.log(`📧 Contact form endpoint: http://localhost:${PORT}/api/contact`);
-});
+// Server startup
+try {
+  // Try to load SSL certificates for HTTPS
+  const httpsOptions = {
+    cert: fs.readFileSync("/etc/letsencrypt/live/lukholc.me/fullchain.pem"),
+    key: fs.readFileSync("/etc/letsencrypt/live/lukholc.me/privkey.pem"),
+  };
+
+  // Create HTTPS server
+  https.createServer(httpsOptions, app).listen(HTTPS_PORT, () => {
+    console.log(`🔒 HTTPS Server running on https://localhost:${HTTPS_PORT}`);
+    console.log(
+      `📧 Contact form endpoint: https://localhost:${HTTPS_PORT}/api/contact`
+    );
+  });
+
+  // Create HTTP server that redirects to HTTPS
+  const redirectApp = express();
+  redirectApp.use((req, res) => {
+    res.redirect(`https://${req.headers.host}${req.url}`);
+  });
+
+  http.createServer(redirectApp).listen(PORT, () => {
+    console.log(
+      `🔄 HTTP Server redirecting to HTTPS on http://localhost:${PORT}`
+    );
+  });
+} catch (error) {
+  // Fallback to HTTP only if certificates not found
+  console.log("⚠️  SSL certificates not found, running HTTP only");
+  console.log(
+    "📝 To enable HTTPS, run: sudo certbot certonly --standalone -d lukholc.me -d www.lukholc.me"
+  );
+
+  app.listen(PORT, () => {
+    console.log(`🚀 HTTP Server running on http://localhost:${PORT}`);
+    console.log(
+      `📧 Contact form endpoint: http://localhost:${PORT}/api/contact`
+    );
+  });
+}
