@@ -1,0 +1,25 @@
+[
+  {
+    "target": "Claude Code",
+    "ai_workflow": {
+      "type": "standard",
+      "rules": [
+        "ai-behavior/minimal-diffs",
+        "ai-behavior/confirm-destructive-actions",
+        "code-style/comments-explain-why-not-what",
+        "code-style/no-hardcoded-values",
+        "git/conventional-commits",
+        "git/feature-branch-workflow"
+      ],
+      "before_start": [
+        "workflow/understand-before-changing",
+        "memory/consult-memory-before-work"
+      ],
+      "before_finish": [
+        "workflow/verify-before-completing",
+        "memory/save-discoveries-to-memory",
+        "life-manager/track-project-progress"
+      ]
+    }
+  }
+]
