@@ -1,11 +1,12 @@
+require("dotenv").config();
+
 const express = require("express");
 const path = require("path");
 const compression = require("compression");
 const helmet = require("helmet");
 const cors = require("cors");
 const rateLimit = require("express-rate-limit");
-
-const { MailerSend, EmailParams, Sender, Recipient } = require("mailersend");
+const { Resend } = require("resend");
 const https = require("https");
 const http = require("http");
 const fs = require("fs");
@@ -14,9 +15,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const HTTPS_PORT = process.env.HTTPS_PORT || 443;
 
-const mailersend = new MailerSend({
-  apiKey: process.env.MAILERSEND_API_KEY,
-});
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Security middleware
 app.use(
@@ -77,31 +76,20 @@ app.post("/api/contact", contactLimiter, async (req, res) => {
     });
   }
 
-  // Here you would typically send an email or save to database
-  console.log("Contact form submission:", { name, email, message });
-  console.log(process.env.YOUR_EMAIL);
-
   try {
-    const recipients = [new Recipient(process.env.YOUR_EMAIL, "Recipient")];
-    const sentFrom = new Sender(
-      "info@test-2p0347zq5w9lzdrn.mlsender.net",
-      "Łukasz Holc"
-    );
-    const emailParams = new EmailParams()
-      .setFrom(sentFrom)
-      .setTo(recipients)
-      .setSubject(`New Contact Form Submission from ${name}`)
-      .setHtml(
-        `<p>You have a new contact form submission from:</p>
+    await resend.emails.send({
+      from: "contact@lukholc.me",
+      to: process.env.CONTACT_EMAIL,
+      subject: `New Contact Form Submission from ${name}`,
+      replyTo: email,
+      html: `<p>You have a new contact form submission from:</p>
              <ul>
                <li><strong>Name:</strong> ${name}</li>
                <li><strong>Email:</strong> ${email}</li>
              </ul>
              <p><strong>Message:</strong></p>
-             <p>${message}</p>`
-      );
-
-    await mailersend.email.send(emailParams);
+             <p>${message}</p>`,
+    });
 
     console.log("Message sent");
     return res.json({
