@@ -15,7 +15,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const HTTPS_PORT = process.env.HTTPS_PORT || 443;
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = process.env.RESEND_API_KEY
+  ? new Resend(process.env.RESEND_API_KEY)
+  : null;
 
 // Security middleware
 app.use(
@@ -73,6 +75,14 @@ app.post("/api/contact", contactLimiter, async (req, res) => {
     return res.json({
       success: true, // Lie to the bot
       message: "Thank you for your message! We'll get back to you soon.",
+    });
+  }
+
+  if (!resend) {
+    console.error("RESEND_API_KEY not configured");
+    return res.status(500).json({
+      success: false,
+      message: "Email service not configured.",
     });
   }
 
