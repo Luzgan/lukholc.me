@@ -42,18 +42,18 @@ var GA_MEASUREMENT_ID = "G-KJ4ZLNWE2B";
     var banner = document.createElement("div");
     banner.id = "cookie-banner";
     banner.className =
-      "fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-secondary-200 shadow-lg transform translate-y-full transition-transform duration-300";
+      "fixed bottom-0 left-0 right-0 z-50 bg-surface-mid border-t border-surface-high shadow-lg transform translate-y-full transition-transform duration-300";
 
     banner.innerHTML =
       '<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">' +
       '<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">' +
-      '<p class="text-sm text-secondary-700">' +
+      '<p class="text-sm text-primary-200/70">' +
       "This site uses cookies for analytics to understand how visitors interact with it. " +
       "No personal data is shared with third parties." +
       "</p>" +
       '<div class="flex gap-3 shrink-0">' +
-      '<button id="cookie-decline" class="bg-secondary-100 hover:bg-secondary-200 text-secondary-800 font-medium py-2 px-4 rounded-lg transition-all duration-300 border border-secondary-200 text-sm">Decline</button>' +
-      '<button id="cookie-accept" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-lg text-sm">Accept</button>' +
+      '<button id="cookie-decline" class="bg-transparent hover:bg-surface-high text-primary-300 font-medium py-2 px-4 rounded-lg transition-all duration-300 border border-surface-high text-sm">Decline</button>' +
+      '<button id="cookie-accept" class="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 text-sm">Accept</button>' +
       "</div>" +
       "</div>" +
       "</div>";
