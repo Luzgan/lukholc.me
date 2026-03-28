@@ -217,8 +217,8 @@ document.addEventListener("DOMContentLoaded", function () {
       formMessage.className =
         "mt-4 p-4 rounded-lg " +
         (type === "success"
-          ? "bg-green-100 text-green-700 border border-green-200"
-          : "bg-red-100 text-red-700 border border-red-200");
+          ? "bg-green-900/30 text-green-400 border border-green-800"
+          : "bg-red-900/30 text-red-400 border border-red-800");
       formMessage.classList.remove("hidden");
       setTimeout(function () {
         formMessage.classList.add("hidden");
@@ -231,11 +231,11 @@ document.addEventListener("DOMContentLoaded", function () {
   if (navbar) {
     window.addEventListener("scroll", function () {
       if (window.scrollY > 50) {
-        navbar.classList.add("bg-white/95");
-        navbar.classList.remove("bg-white/90");
+        navbar.classList.add("bg-surface-base/95");
+        navbar.classList.remove("bg-surface-base/90");
       } else {
-        navbar.classList.remove("bg-white/95");
-        navbar.classList.add("bg-white/90");
+        navbar.classList.remove("bg-surface-base/95");
+        navbar.classList.add("bg-surface-base/90");
       }
     });
   }
@@ -293,7 +293,7 @@ function openProjectModal(projectKey) {
   featuresEl.innerHTML = project.features
     .map(function (f) {
       return (
-        '<li class="flex items-start"><span class="text-primary-600 mr-2">•</span><span>' +
+        '<li class="flex items-start"><span class="text-primary-400 mr-2">•</span><span>' +
         f +
         "</span></li>"
       );
@@ -304,7 +304,7 @@ function openProjectModal(projectKey) {
   stackEl.innerHTML = project.stack
     .map(function (s) {
       return (
-        '<span class="px-3 py-1 bg-primary-100 text-primary-700 text-sm rounded-full">' +
+        '<span class="px-3 py-1 bg-surface-low text-primary-300 text-sm rounded-full font-display">' +
         s +
         "</span>"
       );
@@ -315,7 +315,7 @@ function openProjectModal(projectKey) {
   highlightsEl.innerHTML = project.highlights
     .map(function (h) {
       return (
-        '<li class="flex items-start"><span class="text-primary-600 mr-2">•</span><span>' +
+        '<li class="flex items-start"><span class="text-primary-400 mr-2">•</span><span>' +
         h +
         "</span></li>"
       );
