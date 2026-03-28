@@ -24,10 +24,10 @@
     <!-- Scripts -->
     <script src="/vendor/aos/aos.js"></script>
   </head>
-  <body class="gradient-bg min-h-screen">
+  <body class="section-dark dot-grid-bg min-h-screen">
     <!-- Navigation -->
     <nav
-      class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-secondary-100"
+      class="fixed top-0 w-full bg-surface-base/90 backdrop-blur-md z-50 border-b border-surface-high/50"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-[116px]">
@@ -42,27 +42,27 @@
             <div class="ml-10 flex items-baseline space-x-8">
               <a
                 href="#home"
-                class="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors"
+                class="text-primary-200 hover:text-primary-400 px-3 py-2 text-sm font-medium transition-colors"
                 >Home</a
               >
               <a
                 href="#about"
-                class="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors"
+                class="text-primary-200 hover:text-primary-400 px-3 py-2 text-sm font-medium transition-colors"
                 >About</a
               >
               <a
                 href="#services"
-                class="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors"
+                class="text-primary-200 hover:text-primary-400 px-3 py-2 text-sm font-medium transition-colors"
                 >Services</a
               >
               <a
                 href="#portfolio"
-                class="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors"
+                class="text-primary-200 hover:text-primary-400 px-3 py-2 text-sm font-medium transition-colors"
                 >Work</a
               >
               <a
                 href="#contact"
-                class="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors"
+                class="text-primary-200 hover:text-primary-400 px-3 py-2 text-sm font-medium transition-colors"
                 >Contact</a
               >
             </div>
@@ -72,7 +72,7 @@
           <div class="md:hidden">
             <button
               id="mobile-menu-button"
-              class="text-secondary-700 hover:text-primary-600"
+              class="text-primary-200 hover:text-primary-400"
             >
               <svg
                 class="h-6 w-6"
@@ -95,32 +95,32 @@
       <!-- Mobile Navigation -->
       <div
         id="mobile-menu"
-        class="hidden md:hidden bg-white border-t border-secondary-100"
+        class="hidden md:hidden bg-surface-base border-t border-surface-high/50"
       >
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <a
             href="#home"
-            class="text-secondary-700 hover:text-primary-600 block px-3 py-2 text-base font-medium"
+            class="text-primary-200 hover:text-primary-400 block px-3 py-2 text-base font-medium"
             >Home</a
           >
           <a
             href="#about"
-            class="text-secondary-700 hover:text-primary-600 block px-3 py-2 text-base font-medium"
+            class="text-primary-200 hover:text-primary-400 block px-3 py-2 text-base font-medium"
             >About</a
           >
           <a
             href="#services"
-            class="text-secondary-700 hover:text-primary-600 block px-3 py-2 text-base font-medium"
+            class="text-primary-200 hover:text-primary-400 block px-3 py-2 text-base font-medium"
             >Services</a
           >
           <a
             href="#portfolio"
-            class="text-secondary-700 hover:text-primary-600 block px-3 py-2 text-base font-medium"
+            class="text-primary-200 hover:text-primary-400 block px-3 py-2 text-base font-medium"
             >Work</a
           >
           <a
             href="#contact"
-            class="text-secondary-700 hover:text-primary-600 block px-3 py-2 text-base font-medium"
+            class="text-primary-200 hover:text-primary-400 block px-3 py-2 text-base font-medium"
             >Contact</a
           >
         </div>
@@ -128,20 +128,20 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="pt-[116px] min-h-screen flex items-center">
+    <section id="home" class="pt-[116px] min-h-screen flex items-center section-dark">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div data-aos="fade-right" data-aos-duration="1000">
-            <p class="text-primary-600 font-medium mb-4">Hello, I'm</p>
+            <p class="text-primary-400 font-medium mb-4 font-display">Hello, I'm</p>
             <h1
-              class="text-4xl md:text-6xl font-display font-bold text-secondary-900 mb-6"
+              class="text-4xl md:text-6xl font-display font-bold text-primary-100 mb-6 tracking-tight"
             >
               Łukasz Holc
             </h1>
             <p class="text-2xl md:text-3xl text-gradient font-semibold mb-6">
               Developer & Creator
             </p>
-            <p class="text-xl text-secondary-600 mb-8 leading-relaxed">
+            <p class="text-xl text-primary-200/80 mb-8 leading-relaxed">
               I build across the full spectrum — AI tools, MCP servers, apps,
               plugins, games, and developer tools. No domain is off-limits.
             </p>
@@ -154,42 +154,55 @@
               </a>
             </div>
           </div>
-          <div data-aos="fade-left" data-aos-duration="1000" class="relative">
-            <img src="/images/hero-illustration.png" alt="Developer workspace with AI, MCP servers, apps, and games" class="w-full rounded-2xl" loading="eager" />
+          <div data-aos="fade-left" data-aos-duration="1000" class="relative flex justify-center">
+            <div class="crt-frame w-[320px] h-[320px] md:w-[400px] md:h-[400px] flex items-center justify-center bg-surface-low">
+              <img src="/images/mascot/lux-confident.png" alt="Lux - pixel art mascot standing confidently" class="w-full h-full object-contain p-4" loading="eager" />
+              <div class="power-led"></div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
+    <section id="about" class="py-20 section-darker">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16" data-aos="fade-up">
           <h2
-            class="text-3xl md:text-4xl font-display font-bold text-secondary-900 mb-4"
+            class="text-3xl md:text-4xl font-display font-bold text-primary-100 mb-4"
           >
             About Me
           </h2>
-          <p class="text-xl text-secondary-600 max-w-3xl mx-auto">
+          <p class="text-xl text-primary-200/70 max-w-3xl mx-auto">
             I'm a developer who loves diving deep into systems and building
             tools that make work easier.
           </p>
         </div>
 
-        <!-- Personal Story -->
-        <div class="max-w-4xl mx-auto mb-16" data-aos="fade-up">
-          <p class="text-lg text-secondary-700 leading-relaxed mb-6">
-            My journey in technology started with curiosity about how things
-            work behind the scenes. That curiosity now drives me to build
-            across a wide range of domains — from AI-powered MCP servers and
-            developer CLI tools to mobile apps and games.
-          </p>
-          <p class="text-lg text-secondary-700 leading-relaxed">
-            I believe in shipping useful software and sharing it with the
-            community. Most of my projects are open source, and I enjoy the
-            process of taking an idea from scratch to a working product that
-            others can use and build upon.
-          </p>
+        <div class="pixel-divider mb-12"></div>
+
+        <!-- Personal Story with Lux -->
+        <div class="max-w-5xl mx-auto mb-16 grid md:grid-cols-[1fr_200px] gap-8 items-start" data-aos="fade-up">
+          <div>
+            <p class="text-lg text-primary-200/80 leading-relaxed mb-6">
+              My journey in technology started with curiosity about how things
+              work behind the scenes. That curiosity now drives me to build
+              across a wide range of domains — from AI-powered MCP servers and
+              developer CLI tools to mobile apps and games.
+            </p>
+            <p class="text-lg text-primary-200/80 leading-relaxed">
+              I believe in shipping useful software and sharing it with the
+              community. Most of my projects are open source, and I enjoy the
+              process of taking an idea from scratch to a working product that
+              others can use and build upon.
+            </p>
+          </div>
+          <div class="hidden md:flex justify-center">
+            <div class="crt-frame w-[180px] h-[180px] flex items-center justify-center bg-surface-low">
+              <img src="/images/mascot/lux-waving.png" alt="Lux waving hello" class="w-full h-full object-contain p-2" loading="lazy" />
+              <div class="power-led"></div>
+            </div>
+          </div>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
@@ -199,12 +212,12 @@
             data-aos-delay="100"
           >
             <div class="w-24 h-24 mx-auto mb-6">
-              <img src="/images/icons/problem-solver.png" alt="Problem Solver" class="w-full h-full object-contain" loading="lazy" />
+              <img src="/images/icons-new/problem-solver.png" alt="Problem Solver" class="w-full h-full object-contain" loading="lazy" />
             </div>
-            <h3 class="text-xl font-semibold text-secondary-900 mb-4">
+            <h3 class="text-xl font-display font-semibold text-primary-100 mb-4">
               Problem Solver
             </h3>
-            <p class="text-secondary-600">
+            <p class="text-primary-200/70">
               I approach every project with a problem-solving mindset, finding
               elegant solutions to complex challenges.
             </p>
@@ -216,12 +229,12 @@
             data-aos-delay="200"
           >
             <div class="w-24 h-24 mx-auto mb-6">
-              <img src="/images/icons/detail-oriented.png" alt="Detail Oriented" class="w-full h-full object-contain" loading="lazy" />
+              <img src="/images/icons-new/detail-oriented.png" alt="Detail Oriented" class="w-full h-full object-contain" loading="lazy" />
             </div>
-            <h3 class="text-xl font-semibold text-secondary-900 mb-4">
+            <h3 class="text-xl font-display font-semibold text-primary-100 mb-4">
               Detail Oriented
             </h3>
-            <p class="text-secondary-600">
+            <p class="text-primary-200/70">
               Every line of code matters. I pay attention to the details that
               make the difference between good and great.
             </p>
@@ -233,12 +246,12 @@
             data-aos-delay="300"
           >
             <div class="w-24 h-24 mx-auto mb-6">
-              <img src="/images/icons/reliable-partner.png" alt="Reliable Partner" class="w-full h-full object-contain" loading="lazy" />
+              <img src="/images/icons-new/reliable-partner.png" alt="Reliable Partner" class="w-full h-full object-contain" loading="lazy" />
             </div>
-            <h3 class="text-xl font-semibold text-secondary-900 mb-4">
+            <h3 class="text-xl font-display font-semibold text-primary-100 mb-4">
               Reliable Partner
             </h3>
-            <p class="text-secondary-600">
+            <p class="text-primary-200/70">
               I believe in building lasting relationships with my clients,
               delivering on time and exceeding expectations.
             </p>
@@ -248,126 +261,128 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 gradient-bg">
+    <section id="services" class="py-20 section-dark">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16" data-aos="fade-up">
           <h2
-            class="text-3xl md:text-4xl font-display font-bold text-secondary-900 mb-4"
+            class="text-3xl md:text-4xl font-display font-bold text-primary-100 mb-4"
           >
             What I Do
           </h2>
-          <p class="text-xl text-secondary-600 max-w-3xl mx-auto">
+          <p class="text-xl text-primary-200/70 max-w-3xl mx-auto">
             From AI-powered automation to game development — I go wherever
             the problem takes me.
           </p>
         </div>
 
+        <div class="pixel-divider mb-12"></div>
+
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="card p-8 text-center" data-aos="fade-up" data-aos-delay="100">
             <div class="w-24 h-24 mx-auto mb-6">
-              <img src="/images/icons/ai-automation.png" alt="AI & Automation" class="w-full h-full object-contain" loading="lazy" />
+              <img src="/images/icons-new/ai-automation.png" alt="AI & Automation" class="w-full h-full object-contain" loading="lazy" />
             </div>
-            <h3 class="text-xl font-semibold text-secondary-900 mb-4">
+            <h3 class="text-xl font-display font-semibold text-primary-100 mb-4">
               AI & Automation
             </h3>
-            <p class="text-secondary-600 mb-4">
+            <p class="text-primary-200/70 mb-4">
               MCP servers, AI agents, and workflow automation that make
               intelligent tools practical and useful.
             </p>
-            <ul class="text-sm text-secondary-500 space-y-1">
-              <li>• MCP Servers</li>
-              <li>• AI Agents & Workflows</li>
-              <li>• Semantic Search & Embeddings</li>
+            <ul class="text-sm text-primary-300/60 space-y-1 font-display">
+              <li>MCP Servers</li>
+              <li>AI Agents & Workflows</li>
+              <li>Semantic Search & Embeddings</li>
             </ul>
           </div>
 
           <div class="card p-8 text-center" data-aos="fade-up" data-aos-delay="200">
             <div class="w-24 h-24 mx-auto mb-6">
-              <img src="/images/icons/apps-platforms.png" alt="Apps & Platforms" class="w-full h-full object-contain" loading="lazy" />
+              <img src="/images/icons-new/apps-platforms.png" alt="Apps & Platforms" class="w-full h-full object-contain" loading="lazy" />
             </div>
-            <h3 class="text-xl font-semibold text-secondary-900 mb-4">
+            <h3 class="text-xl font-display font-semibold text-primary-100 mb-4">
               Apps & Platforms
             </h3>
-            <p class="text-secondary-600 mb-4">
+            <p class="text-primary-200/70 mb-4">
               Full-stack web apps, mobile apps, and complete platforms —
               from architecture to deployment.
             </p>
-            <ul class="text-sm text-secondary-500 space-y-1">
-              <li>• React + FastAPI Web Apps</li>
-              <li>• Flutter Mobile (Android & iOS)</li>
-              <li>• End-to-End Platforms</li>
+            <ul class="text-sm text-primary-300/60 space-y-1 font-display">
+              <li>React + FastAPI Web Apps</li>
+              <li>Flutter Mobile (Android & iOS)</li>
+              <li>End-to-End Platforms</li>
             </ul>
           </div>
 
           <div class="card p-8 text-center" data-aos="fade-up" data-aos-delay="300">
             <div class="w-24 h-24 mx-auto mb-6">
-              <img src="/images/icons/plugins-extensions.png" alt="Plugins & Extensions" class="w-full h-full object-contain" loading="lazy" />
+              <img src="/images/icons-new/plugins-extensions.png" alt="Plugins & Extensions" class="w-full h-full object-contain" loading="lazy" />
             </div>
-            <h3 class="text-xl font-semibold text-secondary-900 mb-4">
+            <h3 class="text-xl font-display font-semibold text-primary-100 mb-4">
               Plugins & Extensions
             </h3>
-            <p class="text-secondary-600 mb-4">
+            <p class="text-primary-200/70 mb-4">
               Custom integrations that extend existing tools and platforms
               with new capabilities.
             </p>
-            <ul class="text-sm text-secondary-500 space-y-1">
-              <li>• Tableau Extensions</li>
-              <li>• Browser Plugins</li>
-              <li>• Third-Party Integrations</li>
+            <ul class="text-sm text-primary-300/60 space-y-1 font-display">
+              <li>Tableau Extensions</li>
+              <li>Browser Plugins</li>
+              <li>Third-Party Integrations</li>
             </ul>
           </div>
 
           <div class="card p-8 text-center" data-aos="fade-up" data-aos-delay="100">
             <div class="w-24 h-24 mx-auto mb-6">
-              <img src="/images/icons/cli-dev-tools.png" alt="CLI & Developer Tools" class="w-full h-full object-contain" loading="lazy" />
+              <img src="/images/icons-new/cli-dev-tools.png" alt="CLI & Developer Tools" class="w-full h-full object-contain" loading="lazy" />
             </div>
-            <h3 class="text-xl font-semibold text-secondary-900 mb-4">
+            <h3 class="text-xl font-display font-semibold text-primary-100 mb-4">
               CLI & Developer Tools
             </h3>
-            <p class="text-secondary-600 mb-4">
+            <p class="text-primary-200/70 mb-4">
               Command-line utilities and npm packages that help developers
               work more effectively.
             </p>
-            <ul class="text-sm text-secondary-500 space-y-1">
-              <li>• npm Packages</li>
-              <li>• CLI Utilities</li>
-              <li>• Open Source Tooling</li>
+            <ul class="text-sm text-primary-300/60 space-y-1 font-display">
+              <li>npm Packages</li>
+              <li>CLI Utilities</li>
+              <li>Open Source Tooling</li>
             </ul>
           </div>
 
           <div class="card p-8 text-center" data-aos="fade-up" data-aos-delay="200">
             <div class="w-24 h-24 mx-auto mb-6">
-              <img src="/images/icons/games.png" alt="Games" class="w-full h-full object-contain" loading="lazy" />
+              <img src="/images/icons-new/games.png" alt="Games" class="w-full h-full object-contain" loading="lazy" />
             </div>
-            <h3 class="text-xl font-semibold text-secondary-900 mb-4">
+            <h3 class="text-xl font-display font-semibold text-primary-100 mb-4">
               Games
             </h3>
-            <p class="text-secondary-600 mb-4">
+            <p class="text-primary-200/70 mb-4">
               Game development with custom mechanics, AI systems, and
               interactive experiences.
             </p>
-            <ul class="text-sm text-secondary-500 space-y-1">
-              <li>• Godot Engine (2D & 3D)</li>
-              <li>• Game Mechanics & AI</li>
-              <li>• Interactive Systems</li>
+            <ul class="text-sm text-primary-300/60 space-y-1 font-display">
+              <li>Godot Engine (2D & 3D)</li>
+              <li>Game Mechanics & AI</li>
+              <li>Interactive Systems</li>
             </ul>
           </div>
 
           <div class="card p-8 text-center" data-aos="fade-up" data-aos-delay="300">
             <div class="w-24 h-24 mx-auto mb-6">
-              <img src="/images/icons/data-visualization.png" alt="Data & Visualization" class="w-full h-full object-contain" loading="lazy" />
+              <img src="/images/icons-new/data-visualization.png" alt="Data & Visualization" class="w-full h-full object-contain" loading="lazy" />
             </div>
-            <h3 class="text-xl font-semibold text-secondary-900 mb-4">
+            <h3 class="text-xl font-display font-semibold text-primary-100 mb-4">
               Data & Visualization
             </h3>
-            <p class="text-secondary-600 mb-4">
+            <p class="text-primary-200/70 mb-4">
               Dashboards, data pipelines, and visual analytics that turn
               complex data into clear insights.
             </p>
-            <ul class="text-sm text-secondary-500 space-y-1">
-              <li>• Tableau & Data Platforms</li>
-              <li>• Interactive Dashboards</li>
-              <li>• Data Pipelines & ETL</li>
+            <ul class="text-sm text-primary-300/60 space-y-1 font-display">
+              <li>Tableau & Data Platforms</li>
+              <li>Interactive Dashboards</li>
+              <li>Data Pipelines & ETL</li>
             </ul>
           </div>
         </div>
@@ -375,19 +390,21 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="py-20 bg-white">
+    <section id="portfolio" class="py-20 section-darker">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16" data-aos="fade-up">
           <h2
-            class="text-3xl md:text-4xl font-display font-bold text-secondary-900 mb-4"
+            class="text-3xl md:text-4xl font-display font-bold text-primary-100 mb-4"
           >
             My Work
           </h2>
-          <p class="text-xl text-secondary-600 max-w-3xl mx-auto">
+          <p class="text-xl text-primary-200/70 max-w-3xl mx-auto">
             A selection of projects I've built recently — from AI tooling and
             developer utilities to apps and games.
           </p>
         </div>
+
+        <div class="pixel-divider mb-12"></div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Time Complexity MCP -->
@@ -401,16 +418,16 @@
               <img src="/images/projects/time-complexity-mcp.png" alt="Time Complexity MCP" class="w-full h-full object-cover" loading="lazy" />
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold text-secondary-900 mb-2">
+              <h3 class="text-xl font-display font-semibold text-primary-100 mb-2">
                 Time Complexity MCP
               </h3>
-              <p class="text-secondary-600 mb-4">
+              <p class="text-primary-200/70 mb-4">
                 MCP server for static Big-O time complexity analysis across 7 programming languages.
               </p>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-primary-100 text-primary-700 text-sm rounded-full">TypeScript</span>
-                <span class="px-3 py-1 bg-primary-100 text-primary-700 text-sm rounded-full">Tree-sitter</span>
-                <span class="px-3 py-1 bg-primary-100 text-primary-700 text-sm rounded-full">MCP</span>
+                <span class="px-3 py-1 bg-surface-low text-primary-300 text-sm rounded-full font-display">TypeScript</span>
+                <span class="px-3 py-1 bg-surface-low text-primary-300 text-sm rounded-full font-display">Tree-sitter</span>
+                <span class="px-3 py-1 bg-surface-low text-primary-300 text-sm rounded-full font-display">MCP</span>
               </div>
             </div>
           </div>
@@ -426,16 +443,16 @@
               <img src="/images/projects/ai-rulesmith.png" alt="AI Rulesmith" class="w-full h-full object-cover" loading="lazy" />
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold text-secondary-900 mb-2">
+              <h3 class="text-xl font-display font-semibold text-primary-100 mb-2">
                 AI Rulesmith
               </h3>
-              <p class="text-secondary-600 mb-4">
+              <p class="text-primary-200/70 mb-4">
                 CLI tool to compose AI agent context files from reusable markdown rules. Published on npm.
               </p>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-primary-100 text-primary-700 text-sm rounded-full">TypeScript</span>
-                <span class="px-3 py-1 bg-primary-100 text-primary-700 text-sm rounded-full">CLI</span>
-                <span class="px-3 py-1 bg-primary-100 text-primary-700 text-sm rounded-full">npm</span>
+                <span class="px-3 py-1 bg-surface-low text-primary-300 text-sm rounded-full font-display">TypeScript</span>
+                <span class="px-3 py-1 bg-surface-low text-primary-300 text-sm rounded-full font-display">CLI</span>
+                <span class="px-3 py-1 bg-surface-low text-primary-300 text-sm rounded-full font-display">npm</span>
               </div>
             </div>
           </div>
@@ -451,16 +468,16 @@
               <img src="/images/projects/openbrain.png" alt="OpenBrain" class="w-full h-full object-cover" loading="lazy" />
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold text-secondary-900 mb-2">
+              <h3 class="text-xl font-display font-semibold text-primary-100 mb-2">
                 OpenBrain
               </h3>
-              <p class="text-secondary-600 mb-4">
+              <p class="text-primary-200/70 mb-4">
                 Personal knowledge management MCP server with PostgreSQL and pgvector for semantic search.
               </p>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-primary-100 text-primary-700 text-sm rounded-full">Python</span>
-                <span class="px-3 py-1 bg-primary-100 text-primary-700 text-sm rounded-full">FastMCP</span>
-                <span class="px-3 py-1 bg-primary-100 text-primary-700 text-sm rounded-full">pgvector</span>
+                <span class="px-3 py-1 bg-surface-low text-primary-300 text-sm rounded-full font-display">Python</span>
+                <span class="px-3 py-1 bg-surface-low text-primary-300 text-sm rounded-full font-display">FastMCP</span>
+                <span class="px-3 py-1 bg-surface-low text-primary-300 text-sm rounded-full font-display">pgvector</span>
               </div>
             </div>
           </div>
@@ -476,15 +493,15 @@
               <img src="/images/projects/elements-village.png" alt="Elements Village" class="w-full h-full object-cover" loading="lazy" />
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold text-secondary-900 mb-2">
+              <h3 class="text-xl font-display font-semibold text-primary-100 mb-2">
                 Elements Village
               </h3>
-              <p class="text-secondary-600 mb-4">
+              <p class="text-primary-200/70 mb-4">
                 2D pixel-art village management game with elemental villagers, autonomous AI, and training systems.
               </p>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-primary-100 text-primary-700 text-sm rounded-full">Godot 4</span>
-                <span class="px-3 py-1 bg-primary-100 text-primary-700 text-sm rounded-full">GDScript</span>
+                <span class="px-3 py-1 bg-surface-low text-primary-300 text-sm rounded-full font-display">Godot 4</span>
+                <span class="px-3 py-1 bg-surface-low text-primary-300 text-sm rounded-full font-display">GDScript</span>
               </div>
             </div>
           </div>
@@ -500,17 +517,17 @@
               <img src="/images/projects/life-manager.png" alt="Life Manager" class="w-full h-full object-cover" loading="lazy" />
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold text-secondary-900 mb-2">
+              <h3 class="text-xl font-display font-semibold text-primary-100 mb-2">
                 Life Manager
               </h3>
-              <p class="text-secondary-600 mb-4">
+              <p class="text-primary-200/70 mb-4">
                 Modular life-management platform with project tracking, training logs, social analytics, and MCP integration.
               </p>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-primary-100 text-primary-700 text-sm rounded-full">Python</span>
-                <span class="px-3 py-1 bg-primary-100 text-primary-700 text-sm rounded-full">React</span>
-                <span class="px-3 py-1 bg-primary-100 text-primary-700 text-sm rounded-full">FastAPI</span>
-                <span class="px-3 py-1 bg-secondary-100 text-secondary-600 text-sm rounded-full">Private</span>
+                <span class="px-3 py-1 bg-surface-low text-primary-300 text-sm rounded-full font-display">Python</span>
+                <span class="px-3 py-1 bg-surface-low text-primary-300 text-sm rounded-full font-display">React</span>
+                <span class="px-3 py-1 bg-surface-low text-primary-300 text-sm rounded-full font-display">FastAPI</span>
+                <span class="px-3 py-1 bg-surface-high text-primary-200/50 text-sm rounded-full font-display">Private</span>
               </div>
             </div>
           </div>
@@ -526,16 +543,16 @@
               <img src="/images/projects/tableau-explorer.png" alt="Tableau Workbook Explorer" class="w-full h-full object-cover" loading="lazy" />
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold text-secondary-900 mb-2">
+              <h3 class="text-xl font-display font-semibold text-primary-100 mb-2">
                 Tableau Workbook Explorer
               </h3>
-              <p class="text-secondary-600 mb-4">
+              <p class="text-primary-200/70 mb-4">
                 Upload local Tableau workbooks to visually explore field dependencies within calculations.
               </p>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-primary-100 text-primary-700 text-sm rounded-full">JavaScript</span>
-                <span class="px-3 py-1 bg-primary-100 text-primary-700 text-sm rounded-full">React</span>
-                <span class="px-3 py-1 bg-primary-100 text-primary-700 text-sm rounded-full">React Flow</span>
+                <span class="px-3 py-1 bg-surface-low text-primary-300 text-sm rounded-full font-display">JavaScript</span>
+                <span class="px-3 py-1 bg-surface-low text-primary-300 text-sm rounded-full font-display">React</span>
+                <span class="px-3 py-1 bg-surface-low text-primary-300 text-sm rounded-full font-display">React Flow</span>
               </div>
             </div>
           </div>
@@ -546,17 +563,17 @@
     <!-- Project Modal (populated dynamically by main.js) -->
     <div
       id="project-modal"
-      class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4"
+      class="fixed inset-0 bg-black bg-opacity-70 z-50 hidden flex items-center justify-center p-4"
     >
       <div
-        class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+        class="bg-surface-mid border border-surface-high rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto"
       >
-        <div class="p-6 border-b border-secondary-200">
+        <div class="p-6 border-b border-surface-high">
           <div class="flex justify-between items-center">
-            <h2 id="modal-title" class="text-2xl font-display font-bold text-secondary-900"></h2>
+            <h2 id="modal-title" class="text-2xl font-display font-bold text-primary-100"></h2>
             <button
               id="project-modal-close-btn"
-              class="text-secondary-400 hover:text-secondary-600 transition-colors"
+              class="text-primary-200/50 hover:text-primary-200 transition-colors"
             >
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -569,32 +586,32 @@
           <div class="grid lg:grid-cols-2 gap-8">
             <div>
               <div class="mb-6">
-                <h3 class="text-lg font-semibold text-secondary-900 mb-3">Project Overview</h3>
-                <p id="modal-overview" class="text-secondary-600 leading-relaxed"></p>
+                <h3 class="text-lg font-display font-semibold text-primary-100 mb-3">Project Overview</h3>
+                <p id="modal-overview" class="text-primary-200/70 leading-relaxed"></p>
               </div>
               <div class="mb-6">
-                <h3 class="text-lg font-semibold text-secondary-900 mb-3">Key Features</h3>
-                <ul id="modal-features" class="text-secondary-600 space-y-2"></ul>
+                <h3 class="text-lg font-display font-semibold text-primary-100 mb-3">Key Features</h3>
+                <ul id="modal-features" class="text-primary-200/70 space-y-2"></ul>
               </div>
               <div class="mb-6">
-                <h3 class="text-lg font-semibold text-secondary-900 mb-3">Technical Stack</h3>
+                <h3 class="text-lg font-display font-semibold text-primary-100 mb-3">Technical Stack</h3>
                 <div id="modal-stack" class="flex flex-wrap gap-2"></div>
               </div>
             </div>
             <div>
               <div class="mb-6">
-                <h3 class="text-lg font-semibold text-secondary-900 mb-3">Highlights</h3>
-                <ul id="modal-highlights" class="text-secondary-600 space-y-2"></ul>
+                <h3 class="text-lg font-display font-semibold text-primary-100 mb-3">Highlights</h3>
+                <ul id="modal-highlights" class="text-primary-200/70 space-y-2"></ul>
               </div>
               <div id="modal-github-section" class="mb-6">
-                <a id="modal-github-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-medium transition-colors">
+                <a id="modal-github-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 font-medium transition-colors">
                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
                   View on GitHub
                 </a>
               </div>
             </div>
           </div>
-          <div class="mt-8 pt-6 border-t border-secondary-200 flex flex-col sm:flex-row gap-4 justify-end">
+          <div class="mt-8 pt-6 border-t border-surface-high flex flex-col sm:flex-row gap-4 justify-end">
             <a id="modal-visit-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-secondary text-center hidden">Visit Project</a>
             <a id="get-in-touch-btn" href="#contact" class="btn-primary text-center">Get in Touch</a>
           </div>
@@ -603,24 +620,26 @@
     </div>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 gradient-bg">
+    <section id="contact" class="py-20 section-dark">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16" data-aos="fade-up">
           <h2
-            class="text-3xl md:text-4xl font-display font-bold text-secondary-900 mb-4"
+            class="text-3xl md:text-4xl font-display font-bold text-primary-100 mb-4"
           >
             Let's Connect
           </h2>
-          <p class="text-xl text-secondary-600 max-w-3xl mx-auto">
+          <p class="text-xl text-primary-200/70 max-w-3xl mx-auto">
             Have a project in mind? I'd love to hear about it. Let's discuss how
             we can work together to bring your ideas to life.
           </p>
         </div>
 
-        <div class="max-w-2xl mx-auto" data-aos="fade-up">
+        <div class="pixel-divider mb-12"></div>
+
+        <div class="max-w-3xl mx-auto grid md:grid-cols-[1fr_180px] gap-8 items-start" data-aos="fade-up">
           <div class="card p-8">
             <h3
-              class="text-2xl font-semibold text-secondary-900 mb-6 text-center"
+              class="text-2xl font-display font-semibold text-primary-100 mb-6 text-center"
             >
               Send me a Message
             </h3>
@@ -628,7 +647,7 @@
               <div>
                 <label
                   for="name"
-                  class="block text-sm font-medium text-secondary-700 mb-2"
+                  class="block text-sm font-medium text-primary-200/70 mb-2"
                   >Name</label
                 >
                 <input
@@ -636,14 +655,14 @@
                   id="name"
                   name="name"
                   required
-                  class="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                  class="w-full px-4 py-3 bg-surface-low border border-surface-high rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors text-primary-100 placeholder-primary-200/30"
                 />
               </div>
 
               <div>
                 <label
                   for="email"
-                  class="block text-sm font-medium text-secondary-700 mb-2"
+                  class="block text-sm font-medium text-primary-200/70 mb-2"
                   >Email</label
                 >
                 <input
@@ -651,14 +670,14 @@
                   id="email"
                   name="email"
                   required
-                  class="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                  class="w-full px-4 py-3 bg-surface-low border border-surface-high rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors text-primary-100 placeholder-primary-200/30"
                 />
               </div>
 
               <div>
                 <label
                   for="message"
-                  class="block text-sm font-medium text-secondary-700 mb-2"
+                  class="block text-sm font-medium text-primary-200/70 mb-2"
                   >Message</label
                 >
                 <textarea
@@ -666,7 +685,7 @@
                   name="message"
                   rows="4"
                   required
-                  class="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors resize-none"
+                  class="w-full px-4 py-3 bg-surface-low border border-surface-high rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors resize-none text-primary-100 placeholder-primary-200/30"
                 ></textarea>
               </div>
 
@@ -682,26 +701,36 @@
 
             <div id="form-message" class="mt-4 hidden"></div>
           </div>
+
+          <div class="hidden md:flex justify-center">
+            <div class="crt-frame w-[160px] h-[160px] flex items-center justify-center bg-surface-low">
+              <img src="/images/mascot/lux-envelope.png" alt="Lux holding envelope" class="w-full h-full object-contain p-2" loading="lazy" />
+              <div class="power-led"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-secondary-900 text-white py-12">
+    <footer class="bg-surface-base border-t border-surface-high/30 text-primary-100 py-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-3 gap-8">
           <div class="col-span-1">
-            <div class="text-2xl font-display font-bold text-white mb-4">
-              Łukasz Holc
+            <div class="flex items-center gap-3 mb-4">
+              <img src="/images/mascot/lux-confident.png" alt="Lux" class="w-12 h-12 object-contain" loading="lazy" />
+              <div class="text-2xl font-display font-bold text-primary-100">
+                Łukasz Holc
+              </div>
             </div>
-            <p class="text-secondary-300 mb-6 max-w-md">
+            <p class="text-primary-200/60 mb-6 max-w-md">
               Developer & creator building AI tools, apps, and open-source
               projects.
             </p>
             <div class="flex space-x-4">
               <a
                 href="https://www.linkedin.com/in/lukasz-holc"
-                class="text-secondary-300 hover:text-white transition-colors"
+                class="text-primary-200/60 hover:text-primary-400 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -713,7 +742,7 @@
               </a>
               <a
                 href="https://github.com/Luzgan"
-                class="text-secondary-300 hover:text-white transition-colors"
+                class="text-primary-200/60 hover:text-primary-400 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -727,7 +756,7 @@
               </a>
               <a
                 href="https://ko-fi.com/lukaszholc"
-                class="text-secondary-300 hover:text-white transition-colors flex items-center space-x-1"
+                class="text-primary-200/60 hover:text-primary-400 transition-colors flex items-center space-x-1"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Support me on Ko-fi"
@@ -742,20 +771,20 @@
           </div>
 
           <div class="md:col-start-3">
-            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul class="space-y-2 text-secondary-300">
+            <h4 class="text-lg font-display font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2 text-primary-200/60">
               <li>
-                <a href="#about" class="hover:text-white transition-colors"
+                <a href="#about" class="hover:text-primary-400 transition-colors"
                   >About Me</a
                 >
               </li>
               <li>
-                <a href="#portfolio" class="hover:text-white transition-colors"
+                <a href="#portfolio" class="hover:text-primary-400 transition-colors"
                   >My Work</a
                 >
               </li>
               <li>
-                <a href="#contact" class="hover:text-white transition-colors"
+                <a href="#contact" class="hover:text-primary-400 transition-colors"
                   >Contact</a
                 >
               </li>
@@ -764,9 +793,9 @@
         </div>
 
         <div
-          class="border-t border-secondary-800 mt-8 pt-8 text-center text-secondary-300"
+          class="border-t border-surface-high/30 mt-8 pt-8 text-center text-primary-200/50"
         >
-          <p>&copy; 2026 Łukasz Holc. All rights reserved. · <a href="#" id="cookie-settings-link" class="hover:text-white transition-colors underline">Cookie Settings</a></p>
+          <p>&copy; 2026 Łukasz Holc. All rights reserved. · <a href="#" id="cookie-settings-link" class="hover:text-primary-400 transition-colors underline">Cookie Settings</a></p>
         </div>
       </div>
     </footer>
